@@ -558,6 +558,131 @@ section {
     flex-wrap: wrap;
 }
 
+/* ===================================
+   Pricing Anchor
+   =================================== */
+.pricing-anchor {
+    margin-top: var(--space-3xl);
+    margin-bottom: var(--space-xl);
+    text-align: center;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.pricing-anchor.animate-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.pricing-anchor-content {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    padding: var(--space-xl) var(--space-3xl);
+    background: linear-gradient(135deg, rgba(8, 145, 178, 0.08) 0%, rgba(8, 145, 178, 0.03) 100%);
+    border: 2px dashed var(--color-accent);
+    border-radius: var(--radius-2xl);
+}
+
+.pricing-label {
+    font-size: 0.8125rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--color-accent);
+    margin-bottom: var(--space-sm);
+}
+
+.pricing-value {
+    display: flex;
+    align-items: baseline;
+    gap: var(--space-xs);
+}
+
+.pricing-from {
+    font-size: 1rem;
+    color: var(--text-secondary);
+}
+
+.pricing-amount {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    letter-spacing: -0.02em;
+}
+
+.pricing-period {
+    font-size: 1rem;
+    color: var(--text-secondary);
+}
+
+.pricing-note {
+    font-size: 0.8125rem;
+    color: var(--text-muted);
+    margin-top: var(--space-sm);
+    font-style: italic;
+}
+
+/* ===================================
+   Product Preview Placeholder
+   =================================== */
+.product-preview {
+    margin-top: var(--space-3xl);
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.product-preview.animate-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.product-preview-header {
+    text-align: center;
+    margin-bottom: var(--space-lg);
+}
+
+.preview-label {
+    font-size: 0.8125rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--color-accent);
+}
+
+.product-screenshot-placeholder {
+    background: var(--bg-card);
+    border: 2px dashed var(--color-slate-300);
+    border-radius: var(--radius-2xl);
+    padding: var(--space-4xl);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 400px;
+}
+
+.screenshot-placeholder-content {
+    text-align: center;
+    color: var(--text-muted);
+}
+
+.screenshot-placeholder-content svg {
+    width: 64px;
+    height: 64px;
+    stroke: var(--color-slate-300);
+    margin-bottom: var(--space-md);
+}
+
+.screenshot-placeholder-content h4 {
+    font-size: 1.25rem;
+    color: var(--text-secondary);
+    margin-bottom: var(--space-sm);
+}
+
+.screenshot-placeholder-content p {
+    font-size: 0.9375rem;
+}
+
 .btn-secondary {
     background: var(--bg-card);
     color: var(--text-primary);
@@ -886,6 +1011,49 @@ section {
     text-transform: uppercase;
     letter-spacing: 0.1em;
     margin-bottom: var(--space-lg);
+}
+
+.trust-badges-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--space-xl);
+    flex-wrap: wrap;
+}
+
+.trust-badge-placeholder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-xs);
+    padding: var(--space-md) var(--space-lg);
+    background: var(--color-slate-50);
+    border: 2px dashed var(--color-slate-300);
+    border-radius: var(--radius-lg);
+    color: var(--text-muted);
+    transition: all var(--transition-base);
+}
+
+.trust-badge-placeholder:hover {
+    border-color: var(--color-accent);
+    background: rgba(8, 145, 178, 0.05);
+}
+
+.trust-badge-placeholder svg {
+    width: 32px;
+    height: 32px;
+    stroke: var(--color-slate-400);
+}
+
+.trust-badge-placeholder.security-badge svg {
+    stroke: var(--color-success);
+}
+
+.trust-badge-placeholder span {
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
 }
 
 .trusted-faces {
@@ -1313,6 +1481,20 @@ section {
     font-weight: 500;
 }
 
+.mini-avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: var(--radius-full);
+    background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-accent-dark) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 0.75rem;
+    color: white;
+    border: 2px solid var(--color-accent);
+}
+
 /* ===================================
    Plan / How It Works Section
    =================================== */
@@ -1636,6 +1818,69 @@ section {
 }
 
 /* ===================================
+   Guarantee Badge
+   =================================== */
+.guarantee-badge {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+    margin-top: var(--space-lg);
+    padding: var(--space-md);
+    background: linear-gradient(135deg, rgba(16, 185, 129, 0.1) 0%, rgba(16, 185, 129, 0.05) 100%);
+    border: 1px solid rgba(16, 185, 129, 0.3);
+    border-radius: var(--radius-lg);
+}
+
+.guarantee-badge svg {
+    flex-shrink: 0;
+    width: 32px;
+    height: 32px;
+    stroke: var(--color-success);
+}
+
+.guarantee-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.guarantee-text strong {
+    font-size: 0.875rem;
+    color: var(--color-success);
+    font-weight: 700;
+}
+
+.guarantee-text span {
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+}
+
+/* ===================================
+   Form Trust Badges
+   =================================== */
+.form-trust-badges {
+    display: flex;
+    justify-content: center;
+    gap: var(--space-xl);
+    margin-top: var(--space-xl);
+    flex-wrap: wrap;
+}
+
+.form-trust-item {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    color: var(--text-muted);
+    font-size: 0.8125rem;
+    font-weight: 500;
+}
+
+.form-trust-item svg {
+    width: 18px;
+    height: 18px;
+    stroke: var(--color-accent);
+}
+
+/* ===================================
    FAQ Section
    =================================== */
 .faq {
@@ -1904,6 +2149,25 @@ section {
     }
 }
 
+@media (max-width: 1024px) {
+    .trust-badges-row {
+        gap: var(--space-md);
+    }
+    
+    .pricing-anchor-content {
+        padding: var(--space-lg) var(--space-xl);
+    }
+    
+    .pricing-amount {
+        font-size: 2rem;
+    }
+    
+    .product-screenshot-placeholder {
+        min-height: 300px;
+        padding: var(--space-2xl);
+    }
+}
+
 @media (max-width: 768px) {
     .nav-links {
         position: fixed;
@@ -2003,10 +2267,54 @@ section {
     }
 
     /* Trusted By Mobile */
+    .trust-badges-row {
+        flex-direction: column;
+        gap: var(--space-md);
+    }
+    
+    .trust-badge-placeholder {
+        width: 100%;
+        max-width: 200px;
+    }
+    
     .trusted-face {
         width: 40px;
         height: 40px;
         margin-left: -10px;
+    }
+    
+    /* Pricing Anchor Mobile */
+    .pricing-anchor-content {
+        padding: var(--space-lg);
+        width: 100%;
+    }
+    
+    .pricing-amount {
+        font-size: 1.75rem;
+    }
+    
+    /* Product Preview Mobile */
+    .product-screenshot-placeholder {
+        min-height: 200px;
+        padding: var(--space-xl);
+    }
+    
+    .screenshot-placeholder-content svg {
+        width: 48px;
+        height: 48px;
+    }
+    
+    /* Guarantee Badge Mobile */
+    .guarantee-badge {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    /* Form Trust Badges Mobile */
+    .form-trust-badges {
+        flex-direction: column;
+        align-items: center;
+        gap: var(--space-md);
     }
 
     .stakes-grid {
