@@ -1,0 +1,887 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Lauta - Streamline your legal documents and reclaim your time. AI-powered document automation for law firms.">
+    <meta name="keywords" content="legal document automation, law firm software, document generation, legal tech">
+    <title>Lauta | Legal Document Automation for Modern Law Firms</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;1,500&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/landing.css') }}">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='images/logo-option-3.png') }}">
+</head>
+<body>
+    <!-- ========== HEADER / NAVIGATION ========== -->
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-container">
+                <a href="#" class="logo">
+                    <img src="{{ url_for('static', filename='images/logo-option-3.png') }}" alt="Lauta Logo" class="logo-img">
+                    <span class="logo-text">Lauta</span>
+                </a>
+                
+                <button class="mobile-menu-btn" aria-label="Open menu" id="mobileMenuBtn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="#how-it-works">How It Works</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                    <li><a href="#demo" class="btn btn-primary btn-nav">Schedule a Demo</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- ========== HERO SECTION ========== -->
+    <section class="hero" id="hero">
+        <div class="hero-bg">
+            <div class="hero-gradient"></div>
+            <div class="hero-mesh"></div>
+            <div class="hero-glow"></div>
+        </div>
+        
+        <div class="hero-content">
+            <div class="hero-badge animate-fade-in">
+                <span class="badge-icon">⚡</span>
+                <span>AI-Powered Legal Document Automation</span>
+            </div>
+            
+            <h1 class="hero-title animate-fade-in-up">
+                Streamline Your Legal Documents,<br>
+                <span class="title-accent">Reclaim Your Time</span>
+            </h1>
+            
+            <p class="hero-subtitle animate-fade-in-up delay-1">
+                Are you tired of wasting time on complex document tasks? 
+                Lauta automates your legal document workflow so you can focus on what matters most—your clients.
+            </p>
+            
+            <div class="hero-cta animate-fade-in-up delay-2">
+                <a href="#demo" class="btn btn-primary btn-large">
+                    <span>Schedule a Demo</span>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </a>
+                <a href="#how-it-works" class="btn btn-ghost btn-large">
+                    <span>See How It Works</span>
+                </a>
+            </div>
+            
+            <div class="hero-stats animate-fade-in-up delay-3">
+                <div class="stat">
+                    <span class="stat-number">90%</span>
+                    <span class="stat-label">Time Saved</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat">
+                    <span class="stat-number">3hrs→30min</span>
+                    <span class="stat-label">Document Drafting</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat">
+                    <span class="stat-number">100%</span>
+                    <span class="stat-label">MS Word Integration</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <span>Scroll to explore</span>
+        </div>
+    </section>
+
+    <!-- ========== TRUSTED BY SECTION ========== -->
+    <section class="trusted-by">
+        <div class="container">
+            <p class="trusted-label">Trusted by legal professionals nationwide</p>
+            <div class="trusted-faces">
+                <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=80&h=80&fit=crop&crop=face" alt="Legal professional" class="trusted-face">
+                <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=80&h=80&fit=crop&crop=face" alt="Legal professional" class="trusted-face">
+                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=80&h=80&fit=crop&crop=face" alt="Legal professional" class="trusted-face">
+                <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=80&h=80&fit=crop&crop=face" alt="Legal professional" class="trusted-face">
+                <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=80&h=80&fit=crop&crop=face" alt="Legal professional" class="trusted-face">
+                <div class="trusted-face trusted-more">+500</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== STAKES SECTION ========== -->
+    <section class="stakes" id="stakes">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">The Problem</span>
+                <h2 class="section-title">Avoid Burnout and Lost Clients</h2>
+                <p class="section-subtitle">
+                    When inefficiencies in document management take over, your ability to focus on meaningful legal work diminishes and client satisfaction could be at risk.
+                </p>
+            </div>
+            
+            <div class="stakes-grid">
+                <div class="stake-card" data-animate>
+                    <div class="stake-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <circle cx="12" cy="12" r="10"/>
+                            <polyline points="12,6 12,12 16,14"/>
+                        </svg>
+                    </div>
+                    <h3>Endless Hours Drafting</h3>
+                    <p>Spending too much time on repetitive document creation instead of practicing law.</p>
+                </div>
+                
+                <div class="stake-card" data-animate>
+                    <div class="stake-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/>
+                            <polyline points="14,2 14,8 20,8"/>
+                            <line x1="9" y1="15" x2="15" y2="15"/>
+                        </svg>
+                    </div>
+                    <h3>Outdated Systems</h3>
+                    <p>Frustration with legacy document management that slows your practice down.</p>
+                </div>
+                
+                <div class="stake-card" data-animate>
+                    <div class="stake-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/>
+                            <path d="M8 14s1.5 2 4 2 4-2 4-2"/>
+                            <line x1="9" y1="9" x2="9.01" y2="9"/>
+                            <line x1="15" y1="9" x2="15.01" y2="9"/>
+                        </svg>
+                    </div>
+                    <h3>Administrative Burnout</h3>
+                    <p>Exhaustion from tedious paperwork that drains your energy and passion.</p>
+                </div>
+                
+                <div class="stake-card" data-animate>
+                    <div class="stake-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                            <circle cx="9" cy="7" r="4"/>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                        </svg>
+                    </div>
+                    <h3>Less Client Time</h3>
+                    <p>Too little time for meaningful legal work and building client relationships.</p>
+                </div>
+                
+                <div class="stake-card" data-animate>
+                    <div class="stake-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <circle cx="12" cy="12" r="10"/>
+                            <line x1="12" y1="8" x2="12" y2="12"/>
+                            <line x1="12" y1="16" x2="12.01" y2="16"/>
+                        </svg>
+                    </div>
+                    <h3>Missed Deadlines</h3>
+                    <p>Missing deadlines and making errors causes unnecessary stress and risk.</p>
+                </div>
+                
+                <div class="stake-card" data-animate>
+                    <div class="stake-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <rect x="3" y="3" width="18" height="18" rx="2"/>
+                            <path d="M3 9h18"/>
+                            <path d="M9 21V9"/>
+                        </svg>
+                    </div>
+                    <h3>Inconsistent Quality</h3>
+                    <p>Inconsistent document formatting and quality that undermines professionalism.</p>
+                </div>
+                
+                <div class="stake-card" data-animate>
+                    <div class="stake-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                            <path d="M2 17l10 5 10-5"/>
+                            <path d="M2 12l10 5 10-5"/>
+                        </svg>
+                    </div>
+                    <h3>Integration Difficulties</h3>
+                    <p>Struggling to integrate new solutions with existing workflows and tools.</p>
+                </div>
+                
+                <div class="stake-card" data-animate>
+                    <div class="stake-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+                        </svg>
+                    </div>
+                    <h3>Competitive Pressure</h3>
+                    <p>Struggling to stay competitive in a rapidly evolving legal market.</p>
+                </div>
+            </div>
+            
+            <div class="section-cta">
+                <a href="#demo" class="btn btn-primary btn-large">
+                    <span>Schedule a Demo</span>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== VALUE PROPOSITION SECTION ========== -->
+    <section class="value" id="value">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">The Solution</span>
+                <h2 class="section-title">Transform Paperwork Into Peace of Mind</h2>
+                <p class="section-subtitle">
+                    Achieve more by spending less time on documents. Let Lauta handle the heavy lifting.
+                </p>
+            </div>
+            
+            <div class="value-grid">
+                <div class="value-card" data-animate>
+                    <div class="value-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+                        </svg>
+                    </div>
+                    <div class="value-content">
+                        <h3>Lightning Fast Drafting</h3>
+                        <p>Reduce complex document drafting from <strong>3 hours to just 30 minutes</strong>. Our AI understands legal context and generates accurate documents instantly.</p>
+                    </div>
+                    <div class="value-check">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                            <polyline points="20,6 9,17 4,12"/>
+                        </svg>
+                    </div>
+                </div>
+                
+                <div class="value-card" data-animate>
+                    <div class="value-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <rect x="2" y="3" width="20" height="14" rx="2"/>
+                            <path d="M8 21h8"/>
+                            <path d="M12 17v4"/>
+                            <path d="M7 8h2"/>
+                            <path d="M7 12h4"/>
+                        </svg>
+                    </div>
+                    <div class="value-content">
+                        <h3>Seamless MS Word Integration</h3>
+                        <p>Works right inside Microsoft Word—no new software to learn. <strong>Effortlessly integrate</strong> into your existing workflow without disruption.</p>
+                    </div>
+                    <div class="value-check">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                            <polyline points="20,6 9,17 4,12"/>
+                        </svg>
+                    </div>
+                </div>
+                
+                <div class="value-card" data-animate>
+                    <div class="value-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/>
+                            <path d="M12 6v6l4 2"/>
+                        </svg>
+                    </div>
+                    <div class="value-content">
+                        <h3>Automate Tedious Tasks</h3>
+                        <p><strong>Reclaim your time</strong> by automating repetitive document tasks. Focus on strategy and client relationships, not paperwork.</p>
+                    </div>
+                    <div class="value-check">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                            <polyline points="20,6 9,17 4,12"/>
+                        </svg>
+                    </div>
+                </div>
+                
+                <div class="value-card" data-animate>
+                    <div class="value-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                            <path d="M2 17l10 5 10-5"/>
+                            <path d="M2 12l10 5 10-5"/>
+                        </svg>
+                    </div>
+                    <div class="value-content">
+                        <h3>Built for Legal Professionals</h3>
+                        <p><strong>Designed by professionals who understand legal needs.</strong> Every feature is crafted with the modern law practice in mind.</p>
+                    </div>
+                    <div class="value-check">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                            <polyline points="20,6 9,17 4,12"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="section-cta section-cta-dual">
+                <a href="#how-it-works" class="btn btn-primary btn-large">
+                    <span>See How It Works</span>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 5v14M5 12l7 7 7-7"/>
+                    </svg>
+                </a>
+                <a href="#demo" class="btn btn-secondary btn-large">
+                    <span>Schedule a Demo</span>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== EMPATHY & COMPETENCY SECTION ========== -->
+    <section class="empathy" id="testimonials">
+        <div class="container">
+            <div class="section-header section-header-light">
+                <span class="section-tag section-tag-light">Why Lauta</span>
+                <h2 class="section-title section-title-light">We Understand the Challenges You Face</h2>
+                <p class="section-subtitle section-subtitle-light">
+                    We can help you reclaim your time and sanity.
+                </p>
+            </div>
+            
+            <div class="empathy-grid">
+                <div class="empathy-stats">
+                    <div class="empathy-stat" data-animate>
+                        <div class="empathy-stat-number">90%</div>
+                        <div class="empathy-stat-label">Document Prep Time Reduced</div>
+                        <p class="empathy-stat-desc">Our clients save up to 90% of their drafting time, allowing them to take on more cases.</p>
+                    </div>
+                    
+                    <div class="empathy-stat" data-animate>
+                        <div class="empathy-stat-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                                <circle cx="12" cy="7" r="4"/>
+                            </svg>
+                        </div>
+                        <div class="empathy-stat-label">Designed for Legal Professionals</div>
+                        <p class="empathy-stat-desc">Created by a lawyer's son for maximum efficiency—we understand your world.</p>
+                    </div>
+                </div>
+                
+                <!-- Testimonials Stack -->
+                <div class="testimonials-stack">
+                    <div class="testimonial-card testimonial-card-featured" data-animate>
+                        <div class="testimonial-quote">
+                            <svg class="quote-icon" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M11.192 15.757c0-.88-.23-1.618-.69-2.217-.326-.412-.768-.683-1.327-.812-.55-.128-1.07-.137-1.54-.028-.16-.95.1-1.956.76-3.022.66-1.065 1.515-1.867 2.558-2.403L9.373 5c-.8.396-1.56.898-2.26 1.505-.71.607-1.34 1.305-1.9 2.094s-.98 1.68-1.25 2.69-.346 2.04-.217 3.1c.168 1.4.62 2.52 1.356 3.35.735.84 1.652 1.26 2.748 1.26.965 0 1.766-.29 2.4-.878.628-.576.94-1.365.94-2.368l.002.003zm9.124 0c0-.88-.23-1.618-.69-2.217-.326-.42-.77-.692-1.327-.817-.56-.124-1.074-.13-1.54-.022-.16-.94.09-1.95.75-3.02.66-1.06 1.514-1.86 2.557-2.4L18.49 5c-.8.396-1.555.898-2.26 1.505-.708.607-1.34 1.305-1.894 2.094-.556.79-.97 1.68-1.24 2.69-.273 1-.345 2.04-.217 3.1.168 1.4.62 2.52 1.356 3.35.735.84 1.652 1.26 2.748 1.26.965 0 1.766-.29 2.4-.878.628-.576.94-1.365.94-2.368l.002.003z"/>
+                            </svg>
+                        </div>
+                        <blockquote class="testimonial-text">
+                            Lauta's services transformed our practice. We spend more time with our clients now and less time drowning in paperwork. It's been a game-changer for our firm.
+                        </blockquote>
+                        <div class="testimonial-author">
+                            <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=120&h=120&fit=crop&crop=face" alt="Mark Johnson" class="author-avatar-img">
+                            <div class="author-info">
+                                <strong>Mark J.</strong>
+                                <span>Law Firm Owner, NYC</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-card-mini" data-animate>
+                        <blockquote>"Cut our document prep time by 85%. Incredible!"</blockquote>
+                        <div class="mini-author">
+                            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=60&h=60&fit=crop&crop=face" alt="Sarah Chen">
+                            <span>Sarah C., Partner</span>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-card-mini" data-animate>
+                        <blockquote>"Finally, software that understands legal work."</blockquote>
+                        <div class="mini-author">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=60&h=60&fit=crop&crop=face" alt="David Martinez">
+                            <span>David M., Attorney</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="section-cta">
+                <a href="#demo" class="btn btn-primary-light btn-large">
+                    <span>Schedule a Demo</span>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== HOW IT WORKS / PLAN SECTION ========== -->
+    <section class="plan" id="how-it-works">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">How It Works</span>
+                <h2 class="section-title">3 Simple Steps to Automate</h2>
+                <p class="section-subtitle">
+                    Revolutionize your document process without hassle.
+                </p>
+            </div>
+            
+            <div class="steps-container">
+                <div class="steps-line"></div>
+                
+                <div class="step" data-animate>
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <div class="step-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                                <polyline points="7,10 12,15 17,10"/>
+                                <line x1="12" y1="15" x2="12" y2="3"/>
+                            </svg>
+                        </div>
+                        <h3>Install the Add-In</h3>
+                        <p>Easily integrate Lauta into your MS Word with just a few clicks. No technical expertise required—we'll guide you through the process.</p>
+                    </div>
+                </div>
+                
+                <div class="step" data-animate>
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <div class="step-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                                <polyline points="14,2 14,8 20,8"/>
+                                <line x1="12" y1="18" x2="12" y2="12"/>
+                                <line x1="9" y1="15" x2="15" y2="15"/>
+                            </svg>
+                        </div>
+                        <h3>Upload Your Documents</h3>
+                        <p>Provide us with the document templates you frequently use. Our AI learns your style and preferences to generate consistent output.</p>
+                    </div>
+                </div>
+                
+                <div class="step" data-animate>
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <div class="step-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                                <polyline points="22,4 12,14.01 9,11.01"/>
+                            </svg>
+                        </div>
+                        <h3>Start Automating</h3>
+                        <p>Enjoy the freedom of streamlined document generation. Watch your productivity soar as Lauta handles the heavy lifting.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Interactive Demo -->
+            <div class="how-it-works-demo">
+                <h3 class="demo-section-title">Try It Yourself</h3>
+                <p class="demo-section-subtitle">Select a document type to see Lauta in action</p>
+                
+                <div class="interactive-demo" data-animate>
+                    <!-- Demo Viewer -->
+                    <div class="demo-viewer">
+                        <div class="demo-embed-container">
+                            <!-- Storylane embed will go here -->
+                            <div class="demo-placeholder" id="demoPlaceholder">
+                                <div class="demo-placeholder-content">
+                                    <div class="demo-play-btn">
+                                        <svg viewBox="0 0 24 24" fill="currentColor">
+                                            <polygon points="5,3 19,12 5,21"/>
+                                        </svg>
+                                    </div>
+                                    <h4>Interactive Demo</h4>
+                                    <p>Select a document type and click to start</p>
+                                    <span class="demo-hint">Powered by Storylane</span>
+                                </div>
+                                <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?w=1200&h=675&fit=crop" alt="Lauta Demo Preview" class="demo-preview-img">
+                            </div>
+                            <!-- When Storylane is integrated, replace placeholder with iframe -->
+                        </div>
+                    </div>
+                    
+                    <!-- Document Type Selector -->
+                    <div class="demo-selector">
+                        <h3 class="selector-title">Choose a Document</h3>
+                        
+                        <div class="complexity-group">
+                            <span class="complexity-label complexity-simple">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14">
+                                    <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+                                </svg>
+                                Simple Documents
+                            </span>
+                            <div class="document-cards">
+                                <button class="doc-card active" data-demo="14-day-notice" data-complexity="simple">
+                                    <div class="doc-card-icon">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                                            <polyline points="14,2 14,8 20,8"/>
+                                            <circle cx="12" cy="14" r="3"/>
+                                        </svg>
+                                    </div>
+                                    <div class="doc-card-content">
+                                        <span class="doc-card-title">14 Day Rent Demand Notice</span>
+                                    </div>
+                                </button>
+                                
+                                <button class="doc-card" data-demo="14-day-bulk" data-complexity="simple">
+                                    <div class="doc-card-icon">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                            <path d="M16 4H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                                            <path d="M14 2v6h6"/>
+                                            <path d="M8 12h8"/>
+                                            <path d="M8 16h8"/>
+                                        </svg>
+                                    </div>
+                                    <div class="doc-card-content">
+                                        <span class="doc-card-title">14 Day Rent Demand (Bulk)</span>
+                                    </div>
+                                    <div class="doc-card-badge doc-card-badge-bulk">Bulk</div>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="complexity-group">
+                            <span class="complexity-label complexity-complex">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14">
+                                    <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                                    <path d="M2 17l10 5 10-5"/>
+                                    <path d="M2 12l10 5 10-5"/>
+                                </svg>
+                                Complex Documents
+                            </span>
+                            <div class="document-cards">
+                                <button class="doc-card" data-demo="affirmation-opposition" data-complexity="complex">
+                                    <div class="doc-card-icon doc-card-icon-complex">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                                            <polyline points="14,2 14,8 20,8"/>
+                                            <line x1="16" y1="13" x2="8" y2="13"/>
+                                            <line x1="16" y1="17" x2="8" y2="17"/>
+                                        </svg>
+                                    </div>
+                                    <div class="doc-card-content">
+                                        <span class="doc-card-title">Affirmation In Opposition to Order to Show Cause</span>
+                                    </div>
+                                    <div class="doc-card-badge doc-card-badge-ai">AI Draft</div>
+                                </button>
+                                
+                                <button class="doc-card" data-demo="petition-notice" data-complexity="complex">
+                                    <div class="doc-card-icon doc-card-icon-complex">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                                            <polyline points="14,2 14,8 20,8"/>
+                                            <path d="M12 11v6"/>
+                                            <path d="M9 14h6"/>
+                                        </svg>
+                                    </div>
+                                    <div class="doc-card-content">
+                                        <span class="doc-card-title">Petition and Notice of Petition</span>
+                                    </div>
+                                    <div class="doc-card-badge doc-card-badge-ai">AI Draft</div>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="section-cta">
+                <a href="#demo" class="btn btn-primary btn-large">
+                    <span>Get Started Today</span>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== EXPLANATORY SECTION ========== -->
+    <section class="explainer" id="about">
+        <div class="container">
+            <div class="explainer-grid">
+                <div class="explainer-content" data-animate>
+                    <h2>Streamline Your Law Firm's Operations</h2>
+                    <p class="explainer-lead">Save time and reduce stress.</p>
+                    <div class="explainer-text">
+                        <p>
+                            Many small and mid-sized law firms struggle with inefficient document generation and management, which leads to burnout among attorneys and their staff. At Lauta, we provide a seamless solution through our matter management and document generation services, allowing legal professionals to focus on what they do best.
+                        </p>
+                        <p>
+                            Experience the relief of knowing your documents are handled efficiently, freeing up your time for meaningful legal work and client interactions. Don't let paperwork stand in the way of your success.
+                        </p>
+                    </div>
+                    <a href="#demo" class="btn btn-primary btn-large">
+                        <span>Get Started Today</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
+                    </a>
+                </div>
+                <div class="explainer-image" data-animate>
+                    <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=600&h=700&fit=crop" alt="Happy legal team collaborating">
+                    <div class="image-badge">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                            <polyline points="22,4 12,14.01 9,11.01"/>
+                        </svg>
+                        <span>500+ Happy Firms</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== CTA / DEMO SECTION ========== -->
+    <section class="demo-section" id="demo">
+        <div class="container">
+            <div class="demo-card" data-animate>
+                <div class="demo-content">
+                    <h2>Ready to Transform Your Practice?</h2>
+                    <p>Schedule a personalized demo and see how Lauta can revolutionize your document workflow.</p>
+                    <ul class="demo-benefits">
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20,6 9,17 4,12"/>
+                            </svg>
+                            <span>30-minute personalized walkthrough</span>
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20,6 9,17 4,12"/>
+                            </svg>
+                            <span>See your own documents automated</span>
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20,6 9,17 4,12"/>
+                            </svg>
+                            <span>No obligation, no pressure</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="demo-form">
+                    <form action="#" method="POST" class="contact-form">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" name="name" placeholder="John Smith" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Work Email</label>
+                            <input type="email" id="email" name="email" placeholder="john@lawfirm.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="firm">Law Firm Name</label>
+                            <input type="text" id="firm" name="firm" placeholder="Smith & Associates">
+                        </div>
+                        <div class="form-group">
+                            <label for="size">Firm Size</label>
+                            <select id="size" name="size">
+                                <option value="">Select firm size</option>
+                                <option value="solo">Solo Practitioner</option>
+                                <option value="2-5">2-5 Attorneys</option>
+                                <option value="6-20">6-20 Attorneys</option>
+                                <option value="21-50">21-50 Attorneys</option>
+                                <option value="50+">50+ Attorneys</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-large btn-full">
+                            <span>Schedule My Demo</span>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M5 12h14M12 5l7 7-7 7"/>
+                            </svg>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FAQ SECTION ========== -->
+    <section class="faq" id="faq">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">FAQ</span>
+                <h2 class="section-title">Frequently Asked Questions</h2>
+                <p class="section-subtitle">
+                    Everything you need to know about Lauta.
+                </p>
+            </div>
+            
+            <div class="faq-grid">
+                <div class="faq-item" data-animate>
+                    <button class="faq-question">
+                        <span>How does Lauta integrate with Microsoft Word?</span>
+                        <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 5v14M5 12h14"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Lauta installs as a Word Add-in directly within Microsoft Word. Once installed, you'll see a Lauta panel in your Word ribbon. Simply click to open, and you can start generating documents immediately—no switching between applications required.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item" data-animate>
+                    <button class="faq-question">
+                        <span>What's the difference between Simple and Complex documents?</span>
+                        <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 5v14M5 12h14"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p><strong>Simple documents</strong> (like 14 Day Rent Demand Notices) use template-based automation. You fill in the fields, and Lauta generates the document instantly.</p>
+                        <p><strong>Complex documents</strong> (like Affirmations in Opposition) use AI-powered drafting. Our AI analyzes your case details and generates customized legal arguments and content tailored to your specific situation.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item" data-animate>
+                    <button class="faq-question">
+                        <span>Is my data secure and confidential?</span>
+                        <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 5v14M5 12h14"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Absolutely. We take attorney-client privilege seriously. All data is encrypted in transit and at rest. We use enterprise-grade Azure infrastructure, and your documents are never used to train AI models. Each firm's data is completely isolated.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item" data-animate>
+                    <button class="faq-question">
+                        <span>How long does it take to get started?</span>
+                        <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 5v14M5 12h14"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Most firms are up and running within 30 minutes. Installation takes just a few clicks, and our onboarding team will help you upload your document templates. You can start generating documents the same day.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item" data-animate>
+                    <button class="faq-question">
+                        <span>Can I use my own document templates?</span>
+                        <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 5v14M5 12h14"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes! Lauta is designed to work with your existing templates. Upload your frequently used documents, and our system will learn your formatting preferences, standard language, and firm style. You maintain complete control over your document output.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item" data-animate>
+                    <button class="faq-question">
+                        <span>What types of law practices benefit most from Lauta?</span>
+                        <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 5v14M5 12h14"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Lauta is particularly valuable for practices with high document volume—landlord-tenant, real estate, collections, and general litigation. Any firm that repeatedly creates similar documents will see significant time savings. Solo practitioners to mid-sized firms see the biggest ROI.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item" data-animate>
+                    <button class="faq-question">
+                        <span>Do I need technical expertise to use Lauta?</span>
+                        <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 5v14M5 12h14"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Not at all. If you can use Microsoft Word, you can use Lauta. The interface is intuitive and designed for legal professionals, not IT experts. Plus, our support team is always available to help with any questions.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item" data-animate>
+                    <button class="faq-question">
+                        <span>What happens if the AI makes a mistake?</span>
+                        <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 5v14M5 12h14"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Lauta is a drafting assistant, not a replacement for attorney review. All AI-generated content is clearly marked and should be reviewed before filing. The AI provides a strong first draft that you refine—saving hours while maintaining quality control.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="faq-cta">
+                <p>Still have questions?</p>
+                <a href="#demo" class="btn btn-primary">
+                    <span>Schedule a Demo</span>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#" class="logo">
+                        <img src="{{ url_for('static', filename='images/logo-option-3.png') }}" alt="Lauta Logo" class="logo-img">
+                        <span class="logo-text">Lauta</span>
+                    </a>
+                    <p>AI-powered legal document automation for modern law firms.</p>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#faq">FAQs</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Product</h4>
+                    <ul>
+                        <li><a href="#value">Features</a></li>
+                        <li><a href="#how-it-works">How It Works</a></li>
+                        <li><a href="#demo">Get Started</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 Lauta. All rights reserved.</p>
+                <p>Built with care for legal professionals.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
+
